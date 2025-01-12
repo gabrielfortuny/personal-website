@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <title>Oh no!</title>
+    </head>
+    <body>
+        <!-- JavaScript to Load Navbar -->
+        <script>
+            fetch('components/navbar.html')
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch((error) =>
+                    console.error('Error loading navbar:', error)
+                );
+        </script>
+        <h1>Oh no! I haven't made this page yet!</h1>
+        <h1><a href="/">Go home</a></h1>
+    </body>
+</html>
