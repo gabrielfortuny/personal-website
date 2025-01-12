@@ -3,18 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
         <title>Gabriel Fortuny</title>
     </head>
     <body>
-        <!-- navigation bar -->
-        <nav aria-label="navigation bar" class="nav-bar">
-            <a href="/" class="nav-home">Gabriel Fortuny</a>
-            <div class="nav-links">
-                <a href="/about/">About</a>
-                <a href="/contact/">Contact</a>
-            </div>
-        </nav>
+        <!-- JavaScript to Load Navbar -->
+        <script>
+            fetch('components/navbar.html')
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch((error) =>
+                    console.error('Error loading navbar:', error)
+                );
+        </script>
         <h1>Welcome to my website</h1>
         <p>This is my personal website.</p>
         <p>Hello Lauren :)</p>
